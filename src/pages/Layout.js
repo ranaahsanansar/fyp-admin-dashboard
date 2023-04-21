@@ -22,15 +22,16 @@ const Layout = () => {
                     component={NavLink} 
                     to='/add-property'
                     variant='contained' >Add Property</Button>
-                    <Button
-                    component={NavLink}
-                    to='/'
-                    variant='contained' >Citizen Approval</Button>
+                    
                     <Button
                     component={NavLink} 
                     to='/'
                     variant='contained' >Requests</Button>
                     <Typography variant="h6"  fontSize='medium' >Gov. Authority</Typography>
+                    <Button
+                    component={NavLink}
+                    to='/citizen-approval'
+                    variant='contained' >Citizen Approval</Button>
                     <Button
                     component={NavLink} 
                     to='/'
