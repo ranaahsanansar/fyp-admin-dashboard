@@ -33,13 +33,15 @@ const Layout = () => {
                     to='/citizen-approval'
                     variant='contained' >Citizen Approval</Button>
                     <Button
-                    component={NavLink} 
-                    to='/'
-                    variant='contained' >New Society</Button>
+                    component={NavLink}
+                    to='/manage-citizen'
+                    variant='contained' >Manage Citizen</Button>
+                  
                     <Button
                     component={NavLink} 
-                    to='/'
+                    to='/manage-society'
                     variant='contained' >Manage Society</Button>
+                    
                     <Typography variant="h6"  fontSize='medium' >High Court</Typography>
                     <Button
                     component={NavLink} 
