@@ -1,6 +1,6 @@
 import { Box, Button, CssBaseline, Grid, Stack, Typography } from "@mui/material";
 import { NavLink, Outlet } from "react-router-dom";
-import Navbar from "../Navbar";
+import Navbar from "../components/Navbar";
 
 const Layout = () => {
   return <>
@@ -20,7 +20,7 @@ const Layout = () => {
                   <Typography variant="h6"  fontSize='medium' >LandInspector</Typography>
                     <Button
                     component={NavLink} 
-                    to='/'
+                    to='/add-property'
                     variant='contained' >Add Property</Button>
                     <Button
                     component={NavLink}
@@ -50,7 +50,7 @@ const Layout = () => {
             </Box>
           </Box>
         </Grid>
-        <Grid item lg={10}>
+        <Grid item lg={10} md={10} sm={10} sx={{ height: '100%' , overflow: 'scroll' }}>
           <Outlet /> 
         </Grid>
       </Grid>
