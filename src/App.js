@@ -6,6 +6,7 @@ import CitizenApprovalPage from "./pages/CitizenApprovalPage";
 import TransactionPage from "./pages/TransactionPage";
 import ManageCitizen from "./pages/ManageCitizen";
 import ManageSocietyPage from "./pages/ManageSocietyPage";
+import ManagePropertiesPage from "./pages/ManagePropertiesPage";
 
 function App() {
   return (
@@ -19,9 +20,7 @@ function App() {
             <Route path="transaction" element={<TransactionPage />} />
             <Route path="manage-citizen" element={<ManageCitizen />} />
             <Route path="manage-society" element={<ManageSocietyPage />} />
-            {/* <Route path="manage-citizen" element={<ManageCitizen />} />
-            <Route path="manage-citizen" element={<ManageCitizen />} />
-            <Route path="manage-citizen" element={<ManageCitizen />} /> */}
+            <Route path="manage-properties" element={<ManagePropertiesPage />} />
             
           </Route>
           <Route path="*" element={<h1>ASN 404 Page Not Found</h1>} />

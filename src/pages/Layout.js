@@ -45,8 +45,8 @@ const Layout = () => {
                     <Typography variant="h6"  fontSize='medium' >High Court</Typography>
                     <Button
                     component={NavLink} 
-                    to='/'
-                    variant='contained' >High Court</Button>
+                    to='/manage-properties'
+                    variant='contained' >Manage</Button>
                   </Stack>
                 </Box>
               </Stack>
