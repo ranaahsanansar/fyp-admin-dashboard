@@ -25,8 +25,8 @@ const Layout = () => {
                     
                     <Button
                     component={NavLink} 
-                    to='/'
-                    variant='contained' >Requests</Button>
+                    to='/transaction'
+                    variant='contained' >Transactions</Button>
                     <Typography variant="h6"  fontSize='medium' >Gov. Authority</Typography>
                     <Button
                     component={NavLink}
