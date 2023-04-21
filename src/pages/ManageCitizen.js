@@ -3,6 +3,7 @@ import React from 'react'
 import AddPropertyForm from '../components/Froms/AddPropertyForm'
 import TransferNewOwnership from '../components/Froms/TransferNewOwnership'
 import DeclareDeathForm from '../components/Froms/DeclareDeathForm'
+import SingToReverse from '../components/Froms/SingToReverse'
 
 const ManageCitizen = () => {
     return (
@@ -17,6 +18,7 @@ const ManageCitizen = () => {
                     <DeclareDeathForm />
                 </Box>
                 <Box mt={2} >
+                    <SingToReverse />
 
                 </Box>
             </Container>

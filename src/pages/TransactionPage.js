@@ -4,6 +4,7 @@ import AddPropertyForm from '../components/Froms/AddPropertyForm'
 import TransferNewOwnership from '../components/Froms/TransferNewOwnership'
 import ApproveTransaction from '../components/Froms/ApproveTransaction'
 import TransferToSuccessors from '../components/Froms/TransferToSuccessors'
+import ExecuteReverseCaseForm from '../components/Froms/ExecuteReverseCaseForm'
 const TransactionPage = () => {
     return (
         <>
@@ -19,6 +20,13 @@ const TransactionPage = () => {
                 <Box mt={2} >
                     <TransferToSuccessors />
                 </Box>
+
+
+                <Box mt={2} >
+                    <ExecuteReverseCaseForm />
+                </Box>
+
+
             </Container>
         </>
       )
