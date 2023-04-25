@@ -11,14 +11,44 @@ import {
     Stack,
     TextField,
     Typography,
+    Alert
   } from "@mui/material";
-  import React, { useState } from "react";
+  import React, { useEffect, useState } from "react";
 
 const DeclareDeathForm = () => {
     const [distric , setDistric ] = useState('lahore');
     const [province , setProvince ] = useState('punjab');
     const [society , setSociety ] = useState('none');
     const [block , setBlock ] = useState('park-view');
+
+    const [alert, setAlert] = useState({
+      status: false,
+      msg: "",
+      type: ""
+    });
+  
+    useEffect(()=>{
+      if(alert.status === true){
+          setTimeout(() => {
+        
+        setAlert({
+          status: false,
+          msg: "",
+          type: ""
+        })
+      }, 5000);
+      } 
+      
+    })
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      setAlert({
+        status: true,
+        msg: "Submitted Successfuly!",
+        type: "success"
+      });
+    };
     
   
     const handleChangeProvience = (event) => {
@@ -35,9 +65,9 @@ const DeclareDeathForm = () => {
     };
     return (
       <Box width='100%'  sx={{
-        border:'2px solid gray' , padding:2 , borderRadius: '15px'
+        border:'2px solid gray' , padding:2 , borderRadius: '15px', backgroundColor: '#f2f2f2'
       }} >
-        <Typography variant="h4" fontSize='25px' fontWeight='bold' >Declare Death of Citizzen</Typography>
+        <Typography variant="h4" fontSize='25px' color='primary' fontWeight='bold' >Declare Death of Citizzen</Typography>
         <Divider />
         <Box mt={3} >
           <Box 
@@ -98,10 +128,14 @@ const DeclareDeathForm = () => {
                       type="submit"
                       variant="contained"
                       sx={{ mt: 3, mb: 2, px: 5 }}
+                      onClick={handleSubmit}
                     >
                       Declare Dead
                     </Button>
                   </Box>
+
+          {alert.status ? <Alert severity={alert.type} sx={{ mt: 3 }}>{alert.msg}</Alert> : ''}
+
                   
   
           </Box>

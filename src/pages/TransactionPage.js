@@ -11,7 +11,7 @@ const TransactionPage = () => {
     
             <Container>
                 <Box mt={2} textAlign='center' >
-                    <Typography variant='h3' fontSize='35px' fontWeight='bold' >Only LandInspector can use </Typography>
+                    <Typography variant='h3' fontSize='35px' fontWeight='bold' color='white'>Only LandInspector</Typography>
                 </Box>
                 {/* Add new Property Form  */}
                 <Box mt={2} >

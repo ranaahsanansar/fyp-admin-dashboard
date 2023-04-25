@@ -8,16 +8,22 @@ const Layout = () => {
     <Navbar />
     <Box>
       <Grid container sx={{height: '90vh'}} >
-        <Grid item lg={2} md={2} sm={2} sx={{ height: '100%' , overflow: 'scroll' }} >
+        <Grid item lg={2} md={2} sm={2} sx={{ height: '100%' , backgroundColor: '#3b444b' , overflow: 'scroll' , '&::-webkit-scrollbar': {
+          display: "none"
+      },
+      '&::-webkit-scrollbar-thumb': {
+          backgroundColor: `rgba(0, 0, 0, 0.05)`,
+          display: "none"
+      } }} >
           <Box height='100%'  >
             <Box height='100%'>
               <Stack >
                 <Box my={2} padding={2} >
-                  <Typography variant="h4" fontWeight='bold' fontSize='lg' >Admins</Typography>
+                  <Typography variant="h4" fontWeight='bold' fontSize='lg' color='whitesmoke' >Admins</Typography>
                 </Box>
                 <Box mx={2} >
                   <Stack spacing={2}>
-                  <Typography variant="h6"  fontSize='medium' >LandInspector</Typography>
+                  <Typography variant="h6"  fontSize='medium' color='whitesmoke' >LandInspector</Typography>
                     <Button
                     component={NavLink} 
                     to='/add-property'
@@ -27,7 +33,7 @@ const Layout = () => {
                     component={NavLink} 
                     to='/transaction'
                     variant='contained' >Transactions</Button>
-                    <Typography variant="h6"  fontSize='medium' >Gov. Authority</Typography>
+                    <Typography variant="h6"  fontSize='medium' color='whitesmoke' >Gov. Authority</Typography>
                     <Button
                     component={NavLink}
                     to='/citizen-approval'
@@ -42,7 +48,7 @@ const Layout = () => {
                     to='/manage-society'
                     variant='contained' >Manage Society</Button>
                     
-                    <Typography variant="h6"  fontSize='medium' >High Court</Typography>
+                    <Typography variant="h6"  fontSize='medium' color='whitesmoke' >High Court</Typography>
                     <Button
                     component={NavLink} 
                     to='/manage-properties'
@@ -53,7 +59,7 @@ const Layout = () => {
             </Box>
           </Box>
         </Grid>
-        <Grid item lg={10} md={10} sm={10} sx={{ height: '100%' , overflow: 'scroll' }}>
+        <Grid item lg={10} md={10} sm={10} sx={{ height: '100%' , overflowY: 'scroll' , backgroundColor:'#353839' , }}>
           <Outlet /> 
         </Grid>
       </Grid>

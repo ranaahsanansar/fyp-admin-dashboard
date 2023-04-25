@@ -13,7 +13,7 @@ const ManagePropertiesPage = () => {
     
             <Container>
                 <Box mt={2} textAlign='center' >
-                    <Typography variant='h3' fontSize='35px' fontWeight='bold' >Only Highcourt can use </Typography>
+                    <Typography variant='h3' fontSize='35px' fontWeight='bold' color='white'>Only Highcourt</Typography>
                 </Box>
                 {/* Add new Property Form  */}
                 <Box mt={2} >

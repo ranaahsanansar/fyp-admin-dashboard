@@ -34,12 +34,18 @@ const CitizenApprovalPage = () => {
 
   return (
     <>
-      <Container>
-        <Box mt={2} textAlign="center">
-          <Typography variant="h3" fontSize="35px" fontWeight="bold">
-            Only Goverment Authority can use
+      <Container  >
+
+      <Box mt={2} textAlign="center" >
+          <Typography variant="h3" fontSize="35px" fontWeight="bold" color='white'>
+            Only Goverment Authority
           </Typography>
         </Box>
+
+        <Box sx={{ backgroundColor: 'white' , padding: 2 , borderRadius: 2 , my: 2 }}>
+
+        
+        
         <Box mt={2}>
           <Box>
             <Grid direction="row" container spacing={2}>
@@ -246,7 +252,7 @@ const CitizenApprovalPage = () => {
           </Box>
         </Container>)}
 
-        
+        </Box>
       </Container>
     </>
   );

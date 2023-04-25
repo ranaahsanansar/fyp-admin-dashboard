@@ -11,8 +11,9 @@ import {
     Stack,
     TextField,
     Typography,
+    Alert
   } from "@mui/material";
-  import React, { useState } from "react";
+  import React, { useState , useEffect } from "react";
 
 
 const ReverseTransactionForm = () => {
@@ -20,6 +21,35 @@ const ReverseTransactionForm = () => {
     const [province, setProvince] = useState("punjab");
     const [society, setSociety] = useState("none");
     const [block, setBlock] = useState("park-view");
+
+    const [alert, setAlert] = useState({
+      status: false,
+      msg: "",
+      type: ""
+    });
+  
+    useEffect(()=>{
+      if(alert.status === true){
+          setTimeout(() => {
+        
+        setAlert({
+          status: false,
+          msg: "",
+          type: ""
+        })
+      }, 5000);
+      } 
+      
+    })
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      setAlert({
+        status: true,
+        msg: "Submitted Successfuly!",
+        type: "success"
+      });
+    };
   
     const handleChangeProvience = (event) => {
       setProvince(event.target.value);
@@ -40,9 +70,10 @@ const ReverseTransactionForm = () => {
           border: "2px solid gray",
           padding: 2,
           borderRadius: "15px",
+          backgroundColor: '#f2f2f2'
         }}
       >
-        <Typography variant="h4" fontSize="25px" fontWeight="bold">
+        <Typography variant="h4" fontSize="25px" fontWeight="bold" color='primary'>
           Reverse of Ownership
         </Typography>
         <Divider />
@@ -218,10 +249,13 @@ const ReverseTransactionForm = () => {
                 type="submit"
                 variant="contained"
                 sx={{ mt: 3, mb: 2, px: 5 }}
+                onClick={handleSubmit}
               >
                 Submit
               </Button>
             </Box>
+          {alert.status ? <Alert severity={alert.type} sx={{ mt: 3 }}>{alert.msg}</Alert> : ''}
+
           </Box>
         </Box>
       </Box>
