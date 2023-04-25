@@ -39,11 +39,15 @@ const AddPropertyForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setAlert({
+    let confirm = window.confirm("Are you sure want to Submit?");
+    if (confirm){
+      setAlert({
       status: true,
       msg: "Submitted Successfuly!",
       type: "success"
     });
+    }
+    
   };
 
   const [distric, setDistric] = useState("lahore");
